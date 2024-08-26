@@ -1,0 +1,83 @@
+<html>
+<head><title>Dynamically load images: jQuery Looping</title>
+  <style type="text/css">
+    .body{
+      border-color: black;
+      border-width: 25;
+      border-style: groove;
+      background-color: #02003C;
+    }
+
+    .heading{
+    background-color: #777799;
+   color: #FFFFFF;
+   align-content: center;
+   text-align: center;
+   font-size: 27;
+   font-style: italic;
+   font-family: monospace;
+    }
+
+  </style>
+</head>
+<body class="body" id="body">
+  <section class="heading">
+    <h1>Real time License plate Recognizer using Raspberry pi</h1>
+  </section>
+  <section>
+    <center>
+      <div>
+        <center>
+          <form action="iot.html" method="GET" id="form">
+            <table border="4px" style="border-color:darkslategrey;color: aliceblue; font-size: 28; font-display: block; font-family: monospace; ">
+                <tr>
+                    <td>enter your username :</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="username" style="width: 100%; height: 100%; column-fill: auto"></td>
+                </tr>
+                 <tr>
+                    <td>enter your passcode :</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="passworde" style="width: 100%; height: 100%; column-fill: auto"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+      </div>
+    </form>
+      </center>
+  <section>
+<script type="text/javascript">
+  var use = document.getElementById('username');
+  var pas = document.getElementById('passworde');
+  var form = document.getElementById("form");
+  
+  // function validate() {
+  //   if (use == "admin" && pas == "1234")
+  //   {
+
+  //     window.location.href="iot.html";
+  //   }
+  //   else{
+  //     console.log("Error");
+  //     console.dir(use.innerHTML)
+  //   }
+  // }
+  form.addEventListener('submit',(e)=>{
+    if(use.value === 'admin' && pas.value === '1234'){
+  
+      window.location.href = "iot.html"
+    }
+    else{
+
+      alert("Invalid Credentials");
+    }
+    e.preventDefault();
+  } )
+
+</script>
+</body>
+</html>
